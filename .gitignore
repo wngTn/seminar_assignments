@@ -1,5 +1,5 @@
 assignment_2/tests/histogram/histogram_datafiles
 assignment_2/tests/linear_regression/linear_regression_datafiles
 assignment_2/tests/string_match/string_match_datafiles
-assignment_2/word_count/word_count_datafiles
+assignment_2/tests/word_count/word_count_datafiles
 *.o
