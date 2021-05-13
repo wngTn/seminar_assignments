@@ -22,3 +22,10 @@
 *.mtc1
 *.out
 *.synctex.gz
+assignment_2/tests/histogram/histogram_datafiles
+assignment_2/tests/linear_regression/linear_regression_datafiles
+assignment_2/tests/string_match/string_match_datafiles
+assignment_2/tests/word_count/word_count_datafiles
+assignment_2/tests/matrix_multiply/matrix_file_A.txt
+assignment_2/tests/matrix_multiply/matrix_file_B.txt
+*.o
