@@ -1,55 +1,40 @@
 #!/bin/bash
-if [ -e /usr/bin/time ]
+if [ -e /usr/bin/perf ] && [ -e matrix_file_A.txt ] && [ -e matrix_file_B.txt ]
 then
+    printf "\e[92m---Benchmarking 500x500 Matrices---\n\e[0m" \
+    && \
+    perf stat \
+    --repeat 10 \
+    -e cache-misses \
+    -e page-faults \
+    -e cycles:u \
+    -e instructions \
+    ./matrix_multiply 500 500 \
+    && \
+    printf "\n" \
+    && \
     printf "\e[92m---Benchmarking 750x750 Matrices---\n\e[0m" \
     && \
-    /usr/bin/time -f \
-    "Command that was run: %C
-    Elapsed (wall clock) time (m:ss): %Es
-    User time: %Us
-    System time: %Ss
-    Percent of CPU this job got: %P
-    Voluntary context switches: %W
-    Involuntary context switches: %c
-    Major (requiring I/O) page faults: %F
-    Minor (reclaiming a frame) page faults: %R
-    Page size (bytes): %Z" \
+    perf stat \
+    --repeat 10 \
+    -e cache-misses \
+    -e page-faults \
+    -e cycles:u \
+    -e instructions \
     ./matrix_multiply 750 750 \
     && \
     printf "\n" \
-    && \
-    printf "\e[92m---Benchmarking 1500x1500 Matrices---\n\e[0m" \
-    && \
-    /usr/bin/time -f \
-    "Command that was run: %C
-    Elapsed (wall clock) time (m:ss): %Es
-    User time: %Us
-    System time: %Ss
-    Percent of CPU this job got: %P
-    Voluntary context switches: %W
-    Involuntary context switches: %c
-    Major (requiring I/O) page faults: %F
-    Minor (reclaiming a frame) page faults: %R
-    Page size (bytes): %Z" \
-    ./matrix_multiply 1500 1500\
-    && \
-    printf "\n" \
     &&
-    printf "\e[92m---Benchmarking 3000x3000 Matrices---\n\e[0m" \
+    printf "\e[92m---Benchmarking 1000x1000 Matrices---\n\e[0m" \
     && \
-    /usr/bin/time -f \
-    "Command that was run: %C
-    Elapsed (wall clock) time (m:ss): %Es
-    User time: %Us
-    System time: %Ss
-    Percent of CPU this job got: %P
-    Voluntary context switches: %W
-    Involuntary context switches: %c
-    Major (requiring I/O) page faults: %F
-    Minor (reclaiming a frame) page faults: %R
-    Page size (bytes): %Z" \
-    ./matrix_multiply 3000 3000
+    perf stat \
+    --repeat 10 \
+    -e cache-misses \
+    -e page-faults \
+    -e cycles:u \
+    -e instructions \
+    ./matrix_multiply 1000 1000
 
 else
-    echo "You need to have TIME(1) in /usr/bin/time"
+    echo "You need to have Perf in /usr/bin/perf and matrix_file_A.txt and matrix_file_B.txt"
 fi

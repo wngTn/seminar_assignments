@@ -88,10 +88,10 @@ void parse_args(int argc, char **argv)
         exit(1);
     }
     
-    printf("Dimension = %d\n", dim);
-    printf("Number of clusters = %d\n", num_means);
-    printf("Number of points = %d\n", num_points);
-    printf("Size of each dimension = %d\n", grid_size);    
+    // printf("Dimension = %d\n", dim);
+    // printf("Number of clusters = %d\n", num_means);
+    // printf("Number of points = %d\n", num_points);
+    // printf("Size of each dimension = %d\n", grid_size);    
 }
 
 /** generate_points()

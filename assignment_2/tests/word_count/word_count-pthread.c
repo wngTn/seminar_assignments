@@ -122,7 +122,7 @@ void wordcount_splitter(void *data_in)
    int i,num_procs;
 
    CHECK_ERROR((num_procs = sysconf(_SC_NPROCESSORS_ONLN)) <= 0);
-   dprintf("The number of processors is %d\n\n", num_procs);
+   // dprintf("The number of processors is %d\n\n", num_procs);
 
    wc_data_t * data = (wc_data_t *)data_in; 
    tid = (pthread_t *)MALLOC(num_procs * sizeof(pthread_t));  
@@ -413,7 +413,7 @@ int main(int argc, char *argv[]) {
    fname = argv[1];
    disp_num_str = argv[2];
 
-   printf("Wordcount: Running...\n");
+  //  printf("Wordcount: Running...\n");
    
    // Read in the file
    CHECK_ERROR((fd = open(fname, O_RDONLY)) < 0);

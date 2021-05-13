@@ -56,7 +56,7 @@ void test_endianess() {
     unsigned int num = 0x12345678;
     char *low = (char *)(&(num));
     if (*low ==  0x78) {
-        dprintf("No need to swap\n");
+        // dprintf("No need to swap\n");
         swap = 0;
     }
     else if (*low == 0x12) {
@@ -215,7 +215,7 @@ int main(int argc, char *argv[]) {
     
     fname = argv[1];
 
-    printf("Histogram: Running...\n");
+    // printf("Histogram: Running...\n");
     
     // Read in the file
     CHECK_ERROR((fd = open(fname, O_RDONLY)) < 0);
@@ -258,8 +258,8 @@ int main(int argc, char *argv[]) {
     }
     
     int imgdata_bytes = (int)finfo.st_size - (int)(*(data_pos));
-    printf("This file has %d bytes of image data, %d pixels\n", imgdata_bytes,
-                                                                                imgdata_bytes / 3);
+    // printf("This file has %d bytes of image data, %d pixels\n", imgdata_bytes,
+    //                                                                             imgdata_bytes / 3);
     
     // We use this global variable arrays to store the "key" for each histogram
     // bucket. This is to prevent memory leaks in the mapreduce scheduler                                                                                

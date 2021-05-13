@@ -141,7 +141,7 @@ void string_match_splitter(void *data_in)
     int i, num_procs;
 
     CHECK_ERROR((num_procs = sysconf(_SC_NPROCESSORS_ONLN)) <= 0);
-    printf("The number of processors is %d\n", num_procs);
+    // printf("The number of processors is %d\n", num_procs);
 
     str_data_t * data = (str_data_t *)data_in; 
 
@@ -293,7 +293,7 @@ int main(int argc, char *argv[]) {
     // Setup splitter args
 
 	//dprintf("Encrypted Size is %ld\n",finfo_encrypt.st_size);
-	dprintf("Keys Size is %" PRId64 "\n",finfo_keys.st_size);
+	// dprintf("Keys Size is %" PRId64 "\n",finfo_keys.st_size);
 
     str_data_t str_data;
 
@@ -305,7 +305,7 @@ int main(int argc, char *argv[]) {
     //str_data.encrypted_file_len = finfo_encrypt.st_size;
     //str_data.encrypt_file  = ((char *)fdata_encrypt);     
 
-    printf("String Match: Running...\n");
+    // printf("String Match: Running...\n");
 
     gettimeofday(&starttime,0);
     string_match_splitter(&str_data);

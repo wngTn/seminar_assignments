@@ -79,7 +79,7 @@ void matrixmult_splitter(void *data_in)
     assert(data->output);
 
     CHECK_ERROR((num_procs = sysconf(_SC_NPROCESSORS_ONLN)) <= 0);
-    dprintf("THe number of processors is %d\n", num_procs);
+    // dprintf("THe number of processors is %d\n", num_procs);
 
     tid = (pthread_t *)MALLOC(num_procs * sizeof(pthread_t));
     /* Thread must be scheduled systemwide */
@@ -195,8 +195,8 @@ int main(int argc, char *argv[]) {
     else
 	    create_files = 0;
 
-    printf("MatrixMult_pthreads: Side of the matrix is %d\n", matrix_len);
-    printf("MatrixMult_pthreads: Running...\n");
+    // printf("MatrixMult_pthreads: Side of the matrix is %d\n", matrix_len);
+    // printf("MatrixMult_pthreads: Running...\n");
 
     CHECK_ERROR((fd_out = open(fname_out,O_CREAT | O_RDWR,S_IRWXU)) < 0);
 

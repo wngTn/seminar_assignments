@@ -62,7 +62,7 @@ int main(int argc, char *argv[]) {
    
    fname = argv[1];
 
-   printf("Linear Regression Serial: Running...\n");
+   // printf("Linear Regression Serial: Running...\n");
    
    // Read in the file
    CHECK_ERROR((fd = open(fname, O_RDONLY)) < 0);

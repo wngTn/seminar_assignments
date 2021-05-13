@@ -122,8 +122,8 @@ int main(int argc, char *argv[])
    CHECK_ERROR ( (matrix_len = atoi(argv[1])) < 0);
    file_size = ((matrix_len*matrix_len))*sizeof(int);
 
-   printf("MatrixMult: Side of the matrix is %d \n", matrix_len);
-   printf("MatrixMult: Running...\n");
+   // printf("MatrixMult: Side of the matrix is %d \n", matrix_len);
+   // printf("MatrixMult: Running...\n");
 
    // Read in the file
    CHECK_ERROR((fd_A = open(fname_A,O_RDONLY)) < 0);

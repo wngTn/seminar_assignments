@@ -176,7 +176,7 @@ int main(int argc, char *argv[])
    struct timeval starttime,endtime;
    srand( (unsigned)time( NULL ) );
 
-   printf("String Match: Running...\n");
+   // printf("String Match: Running...\n");
 
    /*// Read in the file
    CHECK_ERROR((fd_encrypt = open(fname_encrypt,O_RDONLY)) < 0);

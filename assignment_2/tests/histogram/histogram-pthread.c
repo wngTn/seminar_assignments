@@ -60,7 +60,7 @@ void test_endianess() {
    unsigned int num = 0x12345678;
    char *low = (char *)(&(num));
    if (*low ==  0x78) {
-      dprintf("No need to swap\n");
+      // dprintf("No need to swap\n");
       swap = 0;
    }
    else if (*low == 0x12) {
@@ -191,8 +191,8 @@ int main(int argc, char *argv[]) {
    
    int imgdata_bytes = (int)finfo.st_size - (int)(*(data_pos));
    int num_pixels = ((int)finfo.st_size - (int)(*(data_pos))) / 3;
-   printf("This file has %d bytes of image data, %d pixels\n", imgdata_bytes,
-                                                            num_pixels);
+   // printf("This file has %d bytes of image data, %d pixels\n", imgdata_bytes,
+                                                            // num_pixels);
 
    // printf("Starting pthreads histogram\n");
    

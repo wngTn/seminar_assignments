@@ -182,7 +182,7 @@ int main(int argc, char *argv[]) {
     
     fname = argv[1];
 
-    printf("Linear Regression: Running...\n");
+    // printf("Linear Regression: Running...\n");
     
     // Read in the file
     CHECK_ERROR((fd = open(fname, O_RDONLY)) < 0);

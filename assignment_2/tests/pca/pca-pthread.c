@@ -93,9 +93,9 @@ void parse_args(int argc, char **argv)
       exit(1);
    }
 
-   printf("Number of rows = %d\n", num_rows);
-   printf("Number of cols = %d\n", num_cols);
-   printf("Max value for each element = %d\n", grid_size);   
+   // printf("Number of rows = %d\n", num_rows);
+   // printf("Number of cols = %d\n", num_cols);
+   // printf("Max value for each element = %d\n", grid_size);   
 }
 
 /** dump_points()
@@ -191,7 +191,7 @@ void pthread_mean() {
    mean_arg_t *mean_args;
 
    CHECK_ERROR((num_procs = sysconf(_SC_NPROCESSORS_ONLN)) <= 0);
-   printf("The number of processors is %d\n", num_procs);
+   // printf("The number of processors is %d\n", num_procs);
 
    tid = (pthread_t *)MALLOC(num_procs * sizeof(pthread_t));
    mean_args = (mean_arg_t *)malloc(num_procs * sizeof(mean_arg_t));

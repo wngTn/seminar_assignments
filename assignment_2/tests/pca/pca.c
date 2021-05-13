@@ -107,9 +107,9 @@ void parse_args(int argc, char **argv)
         exit(1);
     }
 
-    printf("Number of rows = %d\n", num_rows);
-    printf("Number of cols = %d\n", num_cols);
-    printf("Max value for each element = %d\n", grid_size);    
+    // printf("Number of rows = %d\n", num_rows);
+    // printf("Number of cols = %d\n", num_cols);
+    // printf("Max value for each element = %d\n", grid_size);    
 }
 
 /** dump_points()

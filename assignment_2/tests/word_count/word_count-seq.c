@@ -244,7 +244,7 @@ int main(int argc, char *argv[]) {
    fname = argv[1];
    disp_num_str = argv[2];
 
-   printf("Wordcount: Running...\n");
+   // printf("Wordcount: Running...\n");
    
    // Read in the file
    CHECK_ERROR((fd = open(fname, O_RDONLY)) < 0);

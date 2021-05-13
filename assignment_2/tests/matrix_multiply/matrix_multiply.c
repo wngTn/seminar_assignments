@@ -226,9 +226,9 @@ int main(int argc, char *argv[]) {
     else
         create_files = 0;
 
-    printf("MatrixMult: Side of the matrix is %d\n", matrix_len);
-    printf("MatrixMult: Row Block Len is %d\n", row_block_len);
-    printf("MatrixMult: Running...\n");
+    // printf("MatrixMult: Side of the matrix is %d\n", matrix_len);
+    // printf("MatrixMult: Row Block Len is %d\n", row_block_len);
+    // printf("MatrixMult: Running...\n");
 
     /* If the matrix files do not exist, create them */
     if(create_files)
@@ -357,41 +357,6 @@ int main(int argc, char *argv[]) {
     get_time (&begin);
 
     CHECK_ERROR (map_reduce_finalize ());
-
-    //dprintf("\n");
-    //dprintf("The length of the final output is %d\n",mm_vals.length );
-    int sum = 0;
-    for(i=0;i<matrix_len*matrix_len;i++)
-    {
-          sum += mm_data.output[i];
-    }
-    // dprintf ("MatrixMult: total sum is %d\n", sum);
-    //dprintf("\n");
-
-    //dprintf("MatrixMult: MapReduce Completed\n");
-
-    free(mm_vals.data);
-    free(mm_data.output);
-
-#ifndef NO_MMAP
-    CHECK_ERROR(munmap(fdata_A, file_size + 1) < 0);
-#else
-    free (fdata_A);
-#endif
-    CHECK_ERROR(close(fd_A) < 0);
-
-#ifndef NO_MMAP
-    CHECK_ERROR(munmap(fdata_B, file_size + 1) < 0);
-#else
-    free (fdata_B);
-#endif
-    CHECK_ERROR(close(fd_B) < 0);
-
-    get_time (&end);
-
-#ifdef TIMING
-    fprintf (stderr, "finalize: %u\n", time_diff (&end, &begin));
-#endif
 
     return 0;
 }

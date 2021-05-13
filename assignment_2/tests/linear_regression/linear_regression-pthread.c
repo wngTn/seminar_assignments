@@ -116,14 +116,14 @@ int main(int argc, char *argv[])
       PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0)) == NULL);
 
    CHECK_ERROR((num_procs = sysconf(_SC_NPROCESSORS_ONLN)) <= 0);
-   printf("The number of processors is %d\n", num_procs);
+   // printf("The number of processors is %d\n", num_procs);
 
    pthread_attr_init(&attr);
    pthread_attr_setscope(&attr, PTHREAD_SCOPE_SYSTEM);
 
    num_threads = num_procs;
 
-   printf("Linear Regression P-Threads: Running...\n");
+   // printf("Linear Regression P-Threads: Running...\n");
 
 
    POINT_T *points = (POINT_T*)fdata;
