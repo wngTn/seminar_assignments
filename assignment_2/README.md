@@ -4,6 +4,45 @@
 
 # Execution
 
+## **Phoenix**
+The implementation of Phoenix as well as the input files have been directly taken from https://github.com/kozyraki/phoenix!!
+
+### **Run Phoenix**
+To succesfully run the Phoenix benchmarks you need to download the input files I have used.
+
+You can get them here:
+- [Histogram Files](http://home.in.tum.de/~wangt/seminar/data/histogram.tar.gz) ~500MB
+- [Linear Regression Files](http://home.in.tum.de/~wangt/seminar/data/linear_regression.tar.gz) ~200MB
+- [String Matchin Files](http://home.in.tum.de/~wangt/seminar/data/string_match.tar.gz) ~200MB
+- [Word Count Files](http://home.in.tum.de/~wangt/seminar/data/word_count.tar.gz) ~50MB
+
+Extract them with tar: 
+``` bash
+$ tar -zxvf *.tar.gz
+```
+And move them into the respective subdirectory:
+``` bash
+$ mv histogram_datafiles tests/histogram/
+$ mv linear_regression_datafiles tests/linear_regression/
+$ mv string_match_datafiles tests/string_match/
+$ mv word_count_datafiles tests/word_count/
+```
+
+
+Before you can execute something, you need to compile everything:
+``` bash
+$ cd tests
+$ make
+```
+
+Now you can change into the different subdirectories and execute the benchmarks:
+``` bash
+$ cd word_count
+```
+If you don't have the input files in the subdirectory you have to copy them in the subdirectories, or execute:
+
+
+
 ## **Parsec**
 <details>
 <summary><font size = "+1"><b>Installing Parsec</b></font size></summary>
@@ -61,16 +100,27 @@ Great! Now we have installed everything we need.
 
 ### **Run Parsec**
 
-After installing everything properly, we can run the benchmarks very handy from the commandline.
+After installing everything properly, we can run the benchmarks very handy from the commandline. 
 
 The commandline arguments are: `parsecmgmt -a run -p [suite].[PACKAGE] -c [BUILD-CONFIGURATION] -i [INPUT-SIZE] -n [THREAD#]`
 
 To recreate the benchmarks in this assignment, use the following commands:
+
+Example for the `blackscholes` workload:
 ``` bash
-$ parsecmgmt -a run -p parsec.blackscholes -c gcc-serial -i simsmall # run the serial version of blackscholes prorgram with a small workload
+$ parsecmgmt -a run -p parsec.blackscholes -c gcc-serial -i simsmall # run the serial version with a small workload
+$ parsecmgmt -a run -p parsec.blackscholes -c gcc-serial -i simlarge # run the serial version with a large workload
 $ parsecmgmt -a run -p parsec.blackscholes -c gcc -i simsmall -n 4
-# run the parallel version of blackscholes prorgram with a small workload 
+# run the parallel version of blackscholes prorgram with a small workload and 4 threads
+$ parsecmgmt -a run -p parsec.blackscholes -c gcc -i simlarge -n 4
+# run the parallel version of blackscholes prorgram with a large workload and 4 threads
+$ parsecmgmt -a run -p parsec.blackscholes -c gcc -i simsmall -n 8
+# run the parallel version of blackscholes prorgram with a small workload and 8 threads
+$ parsecmgmt -a run -p parsec.blackscholes -c gcc -i simlarge -n 8
+# run the parallel version of blackscholes prorgram with a large workload and 8 threads
 ```
+
+These commands can be run analogoulsy for the other packages: `canneal, fluidanimate, freqmine, raytrace, streamcluster, vips`.
 
 # Plots
 # Description
