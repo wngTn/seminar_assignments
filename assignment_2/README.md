@@ -128,7 +128,7 @@ The commandline arguments are: `parsecmgmt -a run -p [suite].[PACKAGE] -c [BUILD
 
 To recreate the benchmarks in this assignment, use the following commands:
 
-Example for the `blackscholes` workload:
+Example for the <samp>blackscholes</samp> workload:
 ``` bash
 $ parsecmgmt -a run -p parsec.blackscholes -c gcc-serial -i simsmall # run the serial version with a small workload
 $ parsecmgmt -a run -p parsec.blackscholes -c gcc-serial -i simlarge # run the serial version with a large workload
