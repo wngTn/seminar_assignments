@@ -1,14 +1,27 @@
 # Setup
-
+These benchmarks have been evaluated on a Huawei Matebook X Pro 2019. The Specification are as follows:
+-  Intel Core i5-8265U CPU
+   -  Core-number: 4
+   -  Thread-number: 8
+   -  Cache-size: 
+      -  L1: 256 KiB
+      -  L2: 1 MiB
+      -  L3: 6 MiB
+-  Arch-Linux version 2021.05.01
+-  Linux kernel version 2.11.16
+-  GCC-version: 10.2.0
+-  Make-version: 
+- Profiling-tool: [perf](https://man7.org/linux/man-pages/man1/perf.1.html)
 
 
 # Execution
 
-## **Phoenix**
-The implementation of Phoenix as well as the input files have been directly taken from https://github.com/kozyraki/phoenix!!
+## <u>**Phoenix**</u>
+The implementation of Phoenix as well as the input files have been directly taken 
+from https://github.com/kozyraki/phoenix!
 
 ### **Run Phoenix**
-To succesfully run the Phoenix benchmarks you need to download the input files I have used.
+To succesfully run the Phoenix benchmarks you need to download the input files.
 
 You can get them here:
 - [Histogram Files](http://home.in.tum.de/~wangt/seminar/data/histogram.tar.gz) ~500MB
@@ -16,11 +29,14 @@ You can get them here:
 - [String Matchin Files](http://home.in.tum.de/~wangt/seminar/data/string_match.tar.gz) ~200MB
 - [Word Count Files](http://home.in.tum.de/~wangt/seminar/data/word_count.tar.gz) ~50MB
 
+Programs without input files will create random data to evaluate.
+
 Extract them with tar: 
 ``` bash
 $ tar -zxvf *.tar.gz
 ```
-And move them into the respective subdirectory:
+
+Move the folders into the respective subdirectory:
 ``` bash
 $ mv histogram_datafiles tests/histogram/
 $ mv linear_regression_datafiles tests/linear_regression/
@@ -28,79 +44,85 @@ $ mv string_match_datafiles tests/string_match/
 $ mv word_count_datafiles tests/word_count/
 ```
 
-
 Before you can execute something, you need to compile everything:
 ``` bash
-$ cd tests
-$ make
+$ cd tests # switch to the tests/ directory
+$ make # compiles everything
 ```
 
-Now you can change into the different subdirectories and execute the benchmarks:
+Now that you have compiled everything and placed the input files in the correct directories, you can start benchmarking.  
+To execute the benchmarks for every program, first change into the respective directory:
 ``` bash
-$ cd word_count
+$ cd word_count # this example is for the "word_count" program
 ```
-If you don't have the input files in the subdirectory you have to copy them in the subdirectories, or execute:
+In here you have three bash scripts: `run_sequential.sh`, `run_pthread.sh`, `run_map_reduce.sh`. Each of them executes the respective program 10 times and outputs the result with <samp>perf</samp>. You can execute them with:
+``` bash
+$ sh run_sequential.sh # runs the sequential implementation
+$ sh run_pthread.sh # runs the pthread implementation
+$ sh run_map_reduce.sh # runs the mapreduce implementation
+```
+These steps are analogous for: <samp>histogram, kmeans, linear_regression, matrix_multiply, pca</samp> and <samp>string_match</samp>.
 
+___
 
-
-## **Parsec**
+## <u>**Parsec**</u>
+<br>
 <details>
 <summary><font size = "+1"><b>Installing Parsec</b></font size></summary>
 
-  Download PARSEC 3.0
-``` bash
-$ wget http://parsec.cs.princeton.edu/download/3.0/parsec-3.0.tar.gz
-```
+  Download PARSEC 3.0 directly from the princeton website:
+  ``` bash
+  $ wget http://parsec.cs.princeton.edu/download/3.0/parsec-3.0.tar.gz
+  ```
 
-Unpack PARSEC 3.0 package
-``` bash
-$ tar -xzf parsec-3.0.tar.gz
-$ cd parsec-3.0
-```
+  Unpack PARSEC 3.0 package:
+  ``` bash
+  $ tar -xzf parsec-3.0.tar.gz
+  $ cd parsec-3.0
+  ```
 
-Setup environment variable (requires bash)
-``` bash
-$ bash && source env.sh
-```
+  Setup environment variable (requires bash):
+  ``` bash
+  $ bash && source env.sh
+  ```
 
-Building workloads can be done with:  
-`parsecmgmt -a build -p [suite].[PACKAGE] -c [BUILD-CONFIGURATION]`  
+  Building workloads can be done with: `parsecmgmt -a build -p [suite].[PACKAGE] -c [BUILD-CONFIGURATION]`  
 
-In this assignment we use seven different workloads with both serial and parallel version:
-1. Blackscholes
-2. Canneal
-3. Fluidanimate
-4. Freqmine
-5. Raytrace
-6. Streamcluster 
-7. Vips
+  In this assignment we use seven different workloads with the both serial and parallel version:
+  1. <samp>Blackscholes</samp>
+  2. <samp>Canneal</samp>
+  3. <samp>Fluidanimate</samp>
+  4. <samp>Freqmine</samp>
+  5. <samp>Raytrace</samp>
+  6. <samp>Streamcluster</samp>
+  7. <samp>Vips</samp>
 
-To build all these workloads, simply run the following commands:
-``` bash
-$ parsecmgmt -a build -p parsec.blackscholes -c gcc # builds default parallel version of blackscholes workload with gcc
-$ parsecmgmt -a build -p parsec.blackscholes -c gcc-serial # builds the serial version with gcc
-$ parsecmgmt -a build -p parsec.canneal -c gcc # builds default parallel version of canneal workload with gcc
-$ parsecmgmt -a build -p parsec.canneal -c gcc-serial # builds the serial version with gcc
-$ parsecmgmt -a build -p parsec.fluidanimate -c gcc
-$ parsecmgmt -a build -p parsec.fluidanimate -c gcc-serial
-$ parsecmgmt -a build -p parsec.freqmine -c gcc
-$ parsecmgmt -a build -p parsec.freqmine -c gcc-serial
-$ parsecmgmt -a build -p parsec.raytrace -c gcc
-$ parsecmgmt -a build -p parsec.raytrace -c gcc-serial
-$ parsecmgmt -a build -p parsec.streamcluster -c gcc
-$ parsecmgmt -a build -p parsec.streamcluster -c gcc-serial
-$ parsecmgmt -a build -p parsec.vips -c gcc
-$ parsecmgmt -a build -p parsec.vips -c gcc-serial
-```
+  Therefore to build all these workloads, simply run the following commands:
+  ``` bash
+  $ parsecmgmt -a build -p parsec.blackscholes -c gcc # builds default parallel version of blackscholes workload with gcc
+  $ parsecmgmt -a build -p parsec.blackscholes -c gcc-serial # builds the serial version with gcc
+  $ parsecmgmt -a build -p parsec.canneal -c gcc # builds default parallel version of canneal workload with gcc
+  $ parsecmgmt -a build -p parsec.canneal -c gcc-serial # builds the serial version with gcc
+  $ parsecmgmt -a build -p parsec.fluidanimate -c gcc # builds the default parallel version of fluidanimate workload with gcc
+  $ parsecmgmt -a build -p parsec.fluidanimate -c gcc-serial # builds the serial version with gcc
+  $ parsecmgmt -a build -p parsec.freqmine -c gcc # builds the default parallel version of freqmine workload with gcc
+  $ parsecmgmt -a build -p parsec.freqmine -c gcc-serial # builds the serial version with gcc
+  $ parsecmgmt -a build -p parsec.raytrace -c gcc # builds the default parallel version of raytrace workload with gcc
+  $ parsecmgmt -a build -p parsec.raytrace -c gcc-serial # builds the serial version with gcc
+  $ parsecmgmt -a build -p parsec.streamcluster -c gcc # builds the default parallel version of streamcluster workload with gcc
+  $ parsecmgmt -a build -p parsec.streamcluster -c gcc-serial # builds the serial version with gcc
+  $ parsecmgmt -a build -p parsec.vips -c gcc # builds the default parallel version of vipsworkload with gcc
+  $ parsecmgmt -a build -p parsec.vips -c gcc-serial # builds the serial version with gcc
+  ```
 
-Great! Now we have installed everything we need.
+  Great! Now we have installed everything we need.  
+
 </details>
-
-
+<br>
 
 ### **Run Parsec**
 
-After installing everything properly, we can run the benchmarks very handy from the commandline. 
+After everything is installed, we can run the benchmarks very handy from the commandline. 
 
 The commandline arguments are: `parsecmgmt -a run -p [suite].[PACKAGE] -c [BUILD-CONFIGURATION] -i [INPUT-SIZE] -n [THREAD#]`
 
@@ -120,7 +142,7 @@ $ parsecmgmt -a run -p parsec.blackscholes -c gcc -i simlarge -n 8
 # run the parallel version of blackscholes prorgram with a large workload and 8 threads
 ```
 
-These commands can be run analogoulsy for the other packages: `canneal, fluidanimate, freqmine, raytrace, streamcluster, vips`.
+These commands can be run analogoulsy for the other packages: <samp>canneal, fluidanimate, freqmine, raytrace, streamcluster, vips</samp>.
 
 # Plots
 # Description
