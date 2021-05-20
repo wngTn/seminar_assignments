@@ -165,7 +165,7 @@ These commands can be run analogoulsy for the other packages: <samp>canneal, flu
   <img src="./plots/speed_up_phoenix_medium.png" title="Speed Up: Phoenix - Medium Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_medium.png" title="Cache Misses: Phoenix - Medium Dataset" width="490" height="315">
 </p>
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 2.1:</b> relative execution time speed-up on med. datasets<b> Right Figure 2.2:</b> relative cache misses on medium datasets
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 2.1:</b> relative execution time speed-up on med. datasets<b>&emsp; Right Figure 2.2:</b> relative cache misses on medium datasets
 </p>
 
 <br>
@@ -174,7 +174,7 @@ These commands can be run analogoulsy for the other packages: <samp>canneal, flu
   <img src="./plots/speed_up_phoenix_large.png" title="Speed Up: Phoenix - Large Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_large.png" title="Cache Misses: Phoenix - Large Dataset" width="490" height="315">
 </p>
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 3.1:</b> relative execution time speed-up on large datasets&emsp;<b>Right Figure 3.2:</b> relative cache misses on large datasets
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 3.1:</b> relative execution time speed-up on large datasets&emsp;<b> Right Figure 3.2:</b> relative cache misses on large datasets
 </p>
 
 
