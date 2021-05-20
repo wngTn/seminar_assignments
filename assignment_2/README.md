@@ -146,13 +146,26 @@ These commands can be run analogoulsy for the other packages: <samp>canneal, flu
 
 # Plots
 
-## <u>**Phoenix**</u>
-<p align="left">
-<img src="./plots/speed_up_phoenix_small.png">
+ ## <p align="center"><u> **Phoenix** </u></p>
+
+
+<p align="center">
+  <img src="./plots/speed_up_phoenix_small.png" title="test" width="690" height="420" hspace="20"> <img src="./plots/cache_misses_phoenix_small.png" width="690" height="420">
 </p>
-<p align="right">
-<img src="./plots/cache_misses_phoenix_small.png">
+<p align="center">
+  On the left: lkjsdflk On the right: lkjsldkfjier
 </p>
+
+<p align="center">
+  <img src="./plots/speed_up_phoenix_medium.png" title="test" width="690" height="420" hspace="20"> <img src="./plots/cache_misses_phoenix_medium.png" width="690" height="420">
+</p>
+<p align="center">
+  On the left: lkjsdflk On the right: lkjsldkfjier
+</p>
+
+
+
+
 
 ## <u>**Parsec**</u>
 
