@@ -150,18 +150,27 @@ These commands can be run analogoulsy for the other packages: <samp>canneal, flu
 
 
 <p align="center">
-  <img src="./plots/speed_up_phoenix_small.png" title="test" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_small.png" width="490" height="315">
+  <img src="./plots/speed_up_phoenix_small.png" title="Speed Up: Phoenix - Small Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_small.png" title="Cache Misses: Phoenix - Small Dataset" width="490" height="315">
 </p>
 <p align="center">
   On the left: lkjsdflk On the right: lkjsldkfjier
 </p>
 
 <p align="center">
-  <img src="./plots/speed_up_phoenix_medium.png" title="test" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_medium.png" width="490" height="315">
+  <img src="./plots/speed_up_phoenix_medium.png" title="Speed Up: Phoenix - Medium Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_medium.png" title="Cache Misses: Phoenix - Medium Dataset" width="490" height="315">
 </p>
 <p align="center">
   On the left: lkjsdflk On the right: lkjsldkfjier
 </p>
+
+<p align="center">
+  <img src="./plots/speed_up_phoenix_large.png" title="Speed Up: Phoenix - Large Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_large.png" title="Cache Misses: Phoenix - Large Dataset" width="490" height="315">
+</p>
+<p align="center">
+  On the left: lkjsdflk On the right: lkjsldkfjier
+</p>
+
+
 
 
 
