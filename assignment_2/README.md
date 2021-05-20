@@ -18,7 +18,7 @@ These benchmarks have been evaluated on a Huawei Matebook X Pro 2019. The Specif
 -  Make-version: 4.3
 - Profiling-tool: [perf](https://man7.org/linux/man-pages/man1/perf.1.html)
 
-For *Parsec* the default datasets have been used, for *Phoenix* the following have been used:
+The following datasets have been used:
 ## <u>**Phoenix**</u>
 | Application | Datasets
 | --- | --- |
@@ -152,7 +152,6 @@ ___
   Great! Now we have installed everything we need.  
 
 </details>
-<br>
 
 ### **Run Parsec**
 
