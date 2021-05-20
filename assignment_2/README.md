@@ -18,8 +18,10 @@ These benchmarks have been evaluated on a Huawei Matebook X Pro 2019. The Specif
 -  Make-version: 4.3
 - Profiling-tool: [perf](https://man7.org/linux/man-pages/man1/perf.1.html)
 
-For *Parsec* the default datasets have been used, for *Phoenix* the following have been used:
-## <u>**Phoenix**</u>
+<br>
+
+<b>The following datasets have been used:</b>
+### <u>**Phoenix**</u>
 | Application | Datasets
 | --- | --- |
 | `Word Count` | S: 10MB, M: 50MB, L:100MB
@@ -34,7 +36,7 @@ For the *Phoenix* applications, multi-threaded programs have been executed with 
 
 <br>
 
-## <u>**Parsec**</u>
+### <u>**Parsec**</u>
 | Workload | Datasets
 | --- | --- |
 | `blackscholes`  | S: 4,096; L: 65,546 options
@@ -152,7 +154,6 @@ ___
   Great! Now we have installed everything we need.  
 
 </details>
-<br>
 
 ### **Run Parsec**
 
@@ -238,7 +239,6 @@ These commands can be run analogoulsy for the other packages: <samp>canneal, flu
 # Description
 
 ## <u>**Phoenix**</u>
-<br>
 
 ### **Applications Overview**
 
