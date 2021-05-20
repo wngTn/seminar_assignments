@@ -165,7 +165,7 @@ These commands can be run analogoulsy for the other packages: <samp>canneal, flu
   <img src="./plots/speed_up_phoenix_medium.png" title="Speed Up: Phoenix - Medium Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_medium.png" title="Cache Misses: Phoenix - Medium Dataset" width="490" height="315">
 </p>
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 2.1:</b> relative execution time speed-up on medium datasets&emsp;&emsp;&emsp;&emsp;<b>Right Figure 2.2:</b> relative cache misses on medium datasets
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 2.1:</b> relative execution time speed-up on medium datasets <b>Right Figure 2.2:</b> relative cache misses on medium datasets
 </p>
 
 <br>
@@ -174,7 +174,7 @@ These commands can be run analogoulsy for the other packages: <samp>canneal, flu
   <img src="./plots/speed_up_phoenix_large.png" title="Speed Up: Phoenix - Large Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_large.png" title="Cache Misses: Phoenix - Large Dataset" width="490" height="315">
 </p>
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 3.1:</b> relative execution time speed-up on large datasets&emsp;&emsp;&emsp;&emsp;&emsp; <b>Right Figure 3.2:</b> relative cache misses on large datasets
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 3.1:</b> relative execution time speed-up on large datasets&emsp;<b>Right Figure 3.2:</b> relative cache misses on large datasets
 </p>
 
 
@@ -188,7 +188,7 @@ These commands can be run analogoulsy for the other packages: <samp>canneal, flu
   <img src="./plots/speed_up_parsec_small.png" title="Speed Up: Parsec - Small Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_parsec_small.png" title="Cache Misses: Parsec - Small Dataset" width="490" height="315">
 </p>
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 4.1:</b> relative time speed-up on small datasets&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>Right Figure 4.2:</b> relative cache misses on small datasets
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 4.1:</b> relative time speed-up on small datasets&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>Right Figure 4.2:</b> relative cache misses on small datasets
 </p>
 
 <br>
@@ -197,7 +197,7 @@ These commands can be run analogoulsy for the other packages: <samp>canneal, flu
   <img src="./plots/speed_up_parsec_large.png" title="Speed Up: Parsec - Large Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_parsec_large.png" title="Cache Misses: Parsec - Large Dataset" width="490" height="315">
 </p>
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 5.1:</b> relative time speed-up on large datasets&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <b>Right Figure 5.2:</b> relative cache misses on large datasets
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 5.1:</b> relative time speed-up on large datasets&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>Right Figure 5.2:</b> relative cache misses on large datasets
 </p>
 
 <br></br>
