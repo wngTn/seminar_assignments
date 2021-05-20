@@ -145,9 +145,22 @@ $ parsecmgmt -a run -p parsec.blackscholes -c gcc -i simlarge -n 8
 These commands can be run analogoulsy for the other packages: <samp>canneal, fluidanimate, freqmine, raytrace, streamcluster, vips</samp>.
 
 # Plots
+
+## <u>**Phoenix**</u>
+<p align="left">
+<img src="./plots/speed_up_phoenix_small.png">
+</p>
+<p align="right">
+<img src="./plots/cache_misses_phoenix_small.png">
+</p>
+
+## <u>**Parsec**</u>
+
 # Description
 
-## Parsec
+## <u>**Phoenix**</u>
+
+## <u>**Parsec**</u>
 
 ### **Workloads Overview**
 
