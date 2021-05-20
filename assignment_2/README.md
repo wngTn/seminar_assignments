@@ -150,7 +150,7 @@ These commands can be run analogoulsy for the other packages: <samp>canneal, flu
 
 
 <p align="center">
-  <img src="./plots/speed_up_phoenix_small.png" title="test" width="490" height="420" hspace="10"> <img src="./plots/cache_misses_phoenix_small.png" width="490" height="420">
+  <img src="./plots/speed_up_phoenix_small.png" title="test" width="500" height="420" hspace="10"> <img src="./plots/cache_misses_phoenix_small.png" width="500" height="420">
 </p>
 <p align="center">
   On the left: lkjsdflk On the right: lkjsldkfjier
