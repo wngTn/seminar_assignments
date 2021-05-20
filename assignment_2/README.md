@@ -13,6 +13,7 @@ These benchmarks have been evaluated on a Huawei Matebook X Pro 2019. The Specif
 -  Make-version: 
 - Profiling-tool: [perf](https://man7.org/linux/man-pages/man1/perf.1.html)
 
+<br></br>
 
 # Execution
 
@@ -144,39 +145,62 @@ $ parsecmgmt -a run -p parsec.blackscholes -c gcc -i simlarge -n 8
 
 These commands can be run analogoulsy for the other packages: <samp>canneal, fluidanimate, freqmine, raytrace, streamcluster, vips</samp>.
 
+<br></br>
+
 # Plots
 
  ## <p align="center"><u> **Phoenix** </u></p>
 
-
-<p align="center">
+&nbsp;&nbsp;&nbsp;&nbsp; All the implementations in these plots are compared with the respective sequential version.
+<p align="center" style="line-height:0.5">
   <img src="./plots/speed_up_phoenix_small.png" title="Speed Up: Phoenix - Small Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_small.png" title="Cache Misses: Phoenix - Small Dataset" width="490" height="315">
 </p>
-<p align="center">
-  On the left: lkjsdflk On the right: lkjsldkfjier
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 1.1:</b> relative execution time speed-up on small datasets&emsp;&emsp;&emsp;&emsp;&emsp; <b>Right Figure 1.2:</b> relative cache misses on small datasets
 </p>
 
-<p align="center">
+<br>
+
+<p align="center" style="line-height:0.5">
   <img src="./plots/speed_up_phoenix_medium.png" title="Speed Up: Phoenix - Medium Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_medium.png" title="Cache Misses: Phoenix - Medium Dataset" width="490" height="315">
 </p>
-<p align="center">
-  On the left: lkjsdflk On the right: lkjsldkfjier
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 2.1:</b> relative execution time speed-up on medium datasets&emsp;&emsp;&emsp;&emsp;<b>Right Figure 2.2:</b> relative cache misses on medium datasets
 </p>
 
-<p align="center">
+<br>
+
+<p align="center" style="line-height:0.5">
   <img src="./plots/speed_up_phoenix_large.png" title="Speed Up: Phoenix - Large Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_phoenix_large.png" title="Cache Misses: Phoenix - Large Dataset" width="490" height="315">
 </p>
-<p align="center">
-  On the left: lkjsdflk On the right: lkjsldkfjier
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 3.1:</b> relative execution time speed-up on large datasets&emsp;&emsp;&emsp;&emsp;&emsp; <b>Right Figure 3.2:</b> relative cache misses on large datasets
 </p>
 
 
+<br>
 
 
+## <p align="center"><u> **Parsec** </u></p>
 
+&nbsp;&nbsp;&nbsp;&nbsp; <i>Raytrace was not able to run with multiple threads, therefore no data could be gathered.</i>
+<p align="center" style="line-height:0.5">
+  <img src="./plots/speed_up_parsec_small.png" title="Speed Up: Parsec - Small Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_parsec_small.png" title="Cache Misses: Parsec - Small Dataset" width="490" height="315">
+</p>
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 4.1:</b> relative time speed-up on small datasets&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>Right Figure 4.2:</b> relative cache misses on small datasets
+</p>
 
+<br>
 
-## <u>**Parsec**</u>
+<p align="center" style="line-height:0.5">
+  <img src="./plots/speed_up_parsec_large.png" title="Speed Up: Parsec - Large Dataset" width="490" height="315" hspace="10"> <img src="./plots/cache_misses_parsec_large.png" title="Cache Misses: Parsec - Large Dataset" width="490" height="315">
+</p>
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>Left Figure 5.1:</b> relative time speed-up on large datasets&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <b>Right Figure 5.2:</b> relative cache misses on large datasets
+</p>
+
+<br></br>
 
 # Description
 
