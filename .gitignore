@@ -28,3 +28,4 @@ assignment_2/tests/string_match/string_match_datafiles
 assignment_2/tests/word_count/word_count_datafiles
 *.o
 *.DS_STORE
+*.pdf
